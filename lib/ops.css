@@ -1,0 +1,206 @@
+:root {
+    --docsifytabs-border-color: #ededed;
+    --docsifytabs-tab-highlight-color: #009688;
+    --base-font-size: 14px;
+    --theme-color: #009688;
+    --cover-color: #999;
+    --cover-blockquote-color: #4CAF50;
+    --blockquote-color: #555;
+    --cover-heading-color: #777;
+    --cover-blockquote-font-size: var(--font-size-l);
+    --cover-button-background--hover: #009688;
+    --cover-button-color--hover: #FFF;
+    --cover-button-primary-background--hover: #026b61;
+    --cover-button-padding: 1em 4rem;
+    --cover-button-border-radius: 2em;
+    --cover-margin: 0 auto;
+    --cover-max-width: 40em;
+    --cover-text-align: center;
+    --cover-background-mask-opacity: 0.9;
+    --cover-background-mask-visibility: 1;
+    --cover-background-position: center center;
+    --cover-background-repeat: no-repeat;
+    --cover-background-size: cover;
+    --sidebar-width: 20rem;
+    --content-max-width: 68em;
+    --blockquote-background: #FEE;
+    --code-inline-background: #282c34;
+    --code-theme-background: #282c34;
+    --code-theme-tag: #7ec699;
+    --code-theme-function: #f8c555;
+    --code-theme-selector: #eeeeee;
+    --code-theme-text: #ffffff;
+    --code-theme-selection: #91e8e1;
+    --code-theme-keyword: #4CAF50;
+    --code-font-size: 12px;
+    --heading-h1-color: #009688;
+    --heading-h2-color: #c82829;
+    --heading-h3-color: #4CAF50;
+    --heading-font-weight: 600;
+    --heading-h1-font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    --heading-h1-font-size: 2em;
+    --link-color: #009688;
+    --link-color--hover: purple;
+    --link-text-decoration: underline;
+    --docsify-example-panels-document-width: 90%;
+    --docsify-example-panels-wrapper-width: 100%;
+    --docsify-example-panels-padding-inner: 0px 16px;
+    --docsify-example-panels-padding-surroundings: 0px;
+    --docsify-example-panels-left-panel-background: transparent;
+    --docsify-example-panels-left-panel-width: 50%;
+    --docsify-example-panels-right-panel-background: transparent;
+    --docsify-example-panels-right-panel-width: 50%;
+    --docsify-example-panels-title-background: transparent;
+}
+
+  .tab-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(35%, -45%);
+    padding: 0.25em 0.35em;
+    border-radius: 3px;
+    background: red;
+    color: white;
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+  }
+
+  /**mermaid 加强标题  <b></b>**/
+
+  foreignObject {
+    overflow: visible;
+  }
+
+  /**平台入口**/
+  foreignObject .os {
+    position: absolute;
+    top: -100%;
+    transform: translate(0%, -50%);
+    background: hsl(258deg 62% 77% / 72%);
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+  }
+
+  /**平台入口**/
+  foreignObject .in {
+    position: absolute;
+    top: -100%;
+    transform: translate(0%, -50%);
+    background: hsl(258deg 62% 77% / 72%);
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+  }
+
+  /**菜单位置**/
+  foreignObject .menu {
+    position: absolute;
+    top: -50%;
+    transform: translate(0%, -50%);
+    background: hsl(258deg 62% 77% / 72%);
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+  }
+
+  /**数据列表**/
+  foreignObject .list {
+    position: absolute;
+    top: -100%;
+    transform: translate(0%, -50%);
+    background: hsl(258deg 62% 77% / 72%);
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+  }
+
+  /**单条数据**/
+  foreignObject .one {
+    position: absolute;
+    top: -50%;
+    transform: translate(0%, -50%);
+    background: hsl(258deg 62% 77% / 72%);
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+  }
+
+  /**功能按钮**/
+  foreignObject .button {
+    position: absolute;
+    top: -50%;
+    transform: translate(0%, -50%);
+    background: hsl(258deg 62% 77% / 72%);
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+  }
+
+  /**可选列表**/
+  foreignObject .opt {
+    position: absolute;
+    top: -50%;
+    transform: translate(0%, -50%);
+    background: hsl(258deg 62% 77% / 72%);
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+  }
+
+  /**mermaid 加强标题 **/
+
+  /**右侧目录**/
+  aside.toc-nav{
+    top: 50px;
+    right: 0%;
+    margin-right: 2px;
+    max-height: 88%;
+  }
+
+  /**内容最大宽度**/
+  .markdown-section{
+    max-width: 98%;
+  }
+
+  /**左侧分类**/
+  .sidebar .sidebar-nav{
+    line-height: 34px;
+  }
+  .sidebar ul{
+    margin: 0 0 0 32px;
+  }
+  .sidebar-toggle {
+      overflow: visible;
+      bottom: auto;
+      left: 292px;
+      top: 42px;
+      width: 30px;
+      padding: 0px;
+  }
+ .close .sidebar-toggle {
+    overflow: visible;
+    bottom: auto;
+    left: -4px;
+    width: 30px;
+}
+
+.markdown-section{
+  padding: 0px 15px 40px;
+}
+
+.page_toc div.active {
+  border-left-color: #009688;
+  transition: border-left-color 0.23s;
+}
+.page_toc div[class^="lv"] a:hover span {
+  color: var(--sidebar-nav-link-color--active, #009688);
+}
+h2 .anchor{
+  border-bottom: 5px solid #009688;
+}
+h2 .anchor:hover{
+  text-decoration:unset;
+}
