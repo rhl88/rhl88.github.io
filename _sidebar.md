@@ -1,2 +1,2 @@
-* [首页](zh-cn/)
-* [指南](zh-cn/guide)
+* [记事本](zh-cn/node)
+* [工具箱](zh-cn/tool)
