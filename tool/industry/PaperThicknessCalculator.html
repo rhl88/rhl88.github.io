@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>纸张厚度计算器</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <style type="text/css" media="screen">
+
+    </style>
+</head>
+
+<div id="tools">
+    <p>P数：<input type="text" id="pages" value="0" style="width: 40px;" /></p>
+    <p>打印：<input type="radio" name="pageType" value="1" checked="checked" />单面
+        <input type="radio" name="pageType" value="2">双面
+    </p>
+    <p>纸张：<span id="paper">load...</span></p>
+    <p>厚度：<span id="result">0</span> mm</p>
+</div>
+
+<body>
+    <script type="text/javascript"> 
+
+    //窗口大小
+     window.resizeTo(300,290); 
+     //窗口位置
+     window.moveTo(screen.availWidth/2,screen.availHeight/2); 
+
+        var data = [
+            { "铜版纸80克": 0.033 },
+            { "铜版纸105克": 0.043 },
+            { "铜版纸128克": 0.055 },
+            { "铜版纸157克": 0.070 },
+            { "铜版纸200克": 0.090 },
+            { "铜版纸250克": 0.12 },
+            { "铜版纸300克": 0.15 },
+            { "铜版纸350克": 0.19 },
+            { "铜版纸400克": 0.22 },
+            { "哑粉纸80克": 0.035 },
+            { "哑粉纸105克": 0.046 },
+            { "哑粉纸128克": 0.060 },
+            { "哑粉纸157克": 0.070 },
+            { "哑粉纸200克": 0.095 },
+            { "哑粉纸250克": 0.14 },
+            { "哑粉纸300克": 0.17 },
+            { "书纸70克": 0.045 },
+            { "书纸80克": 0.050 },
+            { "书纸100克": 0.060 },
+            { "书纸120克": 0.075 },
+            { "书纸160克": 0.095 },
+            { "书纸250克": 0.14 },
+            { "米色超感95克": 0.053 },
+            { "米色超感135克": 0.075 },
+            { "米色超感240克": 0.15 },
+            { "米色超感270克": 0.17 },
+            { "白色超感270克": 0.17 },
+            { "蛋壳纸300克": 0.18 },
+            { "荷兰白315克": 0.18 },
+            { "莱妮纹315克": 0.16 },
+            { "珠光细格300克": 0.16 },
+            { "冰白珠光250克": 0.15 },
+            { "冰白珠光300克": 0.18 },
+            { "魔力卡250克": 0.15 },
+            { "魔力卡290克": 0.18 },
+            { "灰卡250克": 0.15 },
+            { "灰卡300克": 0.18 },
+            { "灰卡350克": 0.20 },
+            { "灰卡400克": 0.25 },
+            { "白卡250克": 0.175 },
+            { "白卡300克": 0.205 },
+            { "白卡350克": 0.24 },
+            { "白卡400克": 0.275 },
+            { "刚古纸265克": 0.17 },
+            { "皮纹纸250克": 0.18 },
+            { "靓彩细格315克": 0.18 },
+            { "皮纹纸240克": 0.18 },
+        ];
+        //循环处理
+        var option = "";
+        data.forEach(function (item, id) {
+            for (let key in item) {
+                option += '<option value="' + item[key] + '">' + key + '</option>';
+            }
+        });
+        var select = '<select id="paperList"><option value="">请选择</option>' + option + '</select>';
+        //插入到表单
+        $("#paper").html(select);
+        //实时计算
+        $(document).ready(function () {
+            $("#tools").click(function () {
+                var pages = $("#pages").val(); //页数
+                var pageType = $("input[name='pageType']:checked").val(); //页面类型
+                var paperList = $("#paperList option:selected").val();//纸张克重
+                var result = 0; //结果
+                // console.log("页数："+pages);
+                // console.log("页面："+pageType);
+                // console.log("纸张"+paperList);
+                //纸张克重不为空时
+                if (paperList != "" && pages>0) {
+                    if (pageType == 2) {
+                        //双面
+                        result = paperList * (pages - 4) + paperList * 4;
+                    } else {
+                        //单面
+                        result = paperList * (pages-4) * 2 + paperList * 4;
+                    }
+                }
+                $("#result").html(result);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
