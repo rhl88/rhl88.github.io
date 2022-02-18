@@ -1,4 +1,4 @@
 - [首页](/node/README.md)
 - 程序代码
-  - [js](/node/code/code_ javascript.md)
+  - [js](/node/code/code_javascript.md)
   - [C#](/node/code_csharp.md)
