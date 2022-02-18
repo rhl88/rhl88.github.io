@@ -1,5 +1,3 @@
-* 导航
-  * [快速开始](zh-cn/quickstart.md)
-  * [多页文档](zh-cn/more-pages.md)
-  * [定制导航栏](zh-cn/custom-navbar.md)
-  * [封面](zh-cn/cover.md)
+* 开始导航
+  * [工具箱](zh-cn/tool.md)
+  * [记事本](zh-cn/node.md)
