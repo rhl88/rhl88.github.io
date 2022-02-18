@@ -36,6 +36,8 @@ function export_raw(name, data) {
 
 ### 将网页文件设置为窗口工具
 
+演示：[纸张厚度计算器](//holley.gitee.io/demo/industry/PaperThicknessCalculator.html)中的保存到本地的文件
+
 代码
 ```javascript
 
