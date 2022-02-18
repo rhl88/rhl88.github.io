@@ -19,9 +19,17 @@
 
 <body>
   <nav>
-    <a href="#/">首页</a>
-    <a href="#/node/">记事本</a>
-    <a href="#/tool/">工具箱</a>
+    <ul>
+        <li><a href="#/" title="主页" class="active">主页</a></li>
+        <li><a href="#/tool/README" title="工具箱">工具箱</a></li>
+        <li><a href="#/node/README" title="记事本">记事本</a></li>
+        <li>下拉菜单
+            <ul>
+                <li><a href="#/tool/README" title="工具箱">工具箱</a></li>
+                <li><a href="#/node/README" title="记事本">记事本</a></li>
+            </ul>
+        </li>
+    </ul>
   </nav>
   <div id="app"></div>
   
