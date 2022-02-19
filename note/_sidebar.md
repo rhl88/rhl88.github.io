@@ -1,11 +1,11 @@
-- [笔记首页](/note/README.md)
-- 程序代码
-  - 程序
-    - [docsify](/note/program_docsify.md)
-  - 代码
-    - [php](/note/code_php.md)
-    - [js](/note/code_javascript.md)
-    - [C#](/note/code_csharp.md)
-- 网络技巧
-  - 网站
-    - [百度系](/note/skill_baidu.md)
+* [笔记首页](/note/README.md)
+* 程序代码
+  * 程序
+    * [docsify](/note/program_docsify.md)
+  * 代码
+    * [php](/note/code_php.md)
+    * [js](/note/code_javascript.md)
+    * [C#](/note/code_csharp.md)
+* 网络技巧
+  * 网站
+    * [百度系](/note/skill_baidu.md)
