@@ -4,6 +4,7 @@
     * [docsify](/note/program_docsify.md)
   * 代码
     * [php](/note/code_php.md)
+    * [html](/note/code_html.md)
     * [js](/note/code_javascript.md)
     * [C#](/note/code_csharp.md)
 * 网络技巧
