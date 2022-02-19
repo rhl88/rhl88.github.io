@@ -362,6 +362,18 @@ function export_raw(name, data) {
 }  
 ```
 
+### JS将网页文件设置为窗口工具
+
+演示：[纸张厚度计算器](//www.renhuali.cn/demo/industry/PaperThicknessCalculator.html)中的保存到本地的文件
+
+代码
+```javascript
+//窗口大小
+window.resizeTo(300,290); 
+//窗口位置
+window.moveTo(screen.availWidth/2,screen.availHeight/2); 
+```
+
 ### 重新加载引入的JS文件
 ```html
 <!DOCTYPE html>
@@ -400,16 +412,4 @@ function export_raw(name, data) {
     <script src="./test3.js" type="text/javascript" id="js3"></script>
 </body>
 </html>
-```
-
-### JS将网页文件设置为窗口工具
-
-演示：[纸张厚度计算器](//www.renhuali.cn/demo/industry/PaperThicknessCalculator.html)中的保存到本地的文件
-
-代码
-```javascript
-//窗口大小
-window.resizeTo(300,290); 
-//窗口位置
-window.moveTo(screen.availWidth/2,screen.availHeight/2); 
 ```
