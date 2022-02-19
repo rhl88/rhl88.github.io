@@ -30,9 +30,17 @@
 这个链接用 test 作为网址变量 [测试][test]
 然后在文档的结尾为变量赋值（网址）
 
-  [1]: http://www.google.com/
-  [test]: http://www.renhuali.cn/
+[1]: http://www.google.com/
+[test]: http://www.renhuali.cn/
 ```
+
+这个链接用 1 作为网址变量 [Google][1]
+这个链接用 test 作为网址变量 [测试][test]
+然后在文档的结尾为变量赋值（网址）
+
+[1]: http://www.google.com/
+[test]: http://www.renhuali.cn/
+
 
 ### 脚注
 
