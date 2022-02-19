@@ -1,5 +1,20 @@
 ### 基础常用
 
+#### 监听页面滚动条
+```javascript
+$(window).scroll(function () {
+//逻辑
+});
+```
+
+#### JS获取当前页面的滚动位置
+```javascript
+const getScrollPosition = (el = window) => ({
+            x: el.pageXOffset !== undefined ? el.pageXOffset : el.scrollLeft,
+            y: el.pageYOffset !== undefined ? el.pageYOffset : el.scrollTop
+        });
+```	
+
 #### GET请求和POST请求
 ```javascript
 $.post("/account/submit?type=Deals&orderid=1", {
@@ -412,4 +427,52 @@ window.moveTo(screen.availWidth/2,screen.availHeight/2);
     <script src="./test3.js" type="text/javascript" id="js3"></script>
 </body>
 </html>
+```
+
+### 全选获取选中自定义属性的值
+**body代码**
+```html
+//操作按钮
+<a οnclick="check1()"> </a>
+//表头
+<input type="checkbox" id="awesome" name="ck" οnclick="selectAll()"/>
+//循环显示数据 uuid是自定义的属性 onclick是选中事件 value是值 name是js里面需要的
+<input type="checkbox" id="awesome" name="cks" value="${item.projectId}" uuid="${item.invoiceState}" οnclick="setSelectAll()"/>
+```
+**script操作**
+```javascript
+//全选、取消全选的事件 使用prop可以避免版本迭代的bug，避免出现只能全选一次 
+function selectAll(){    
+    if ($("input[name='ck']").prop("checked")) {          
+        $("input[type='checkbox'][name='cks']").prop("checked",true);//全选
+    } else {             
+        $("input[type='checkbox'][name='cks']").prop("checked",false);  //取消全选     
+    }  
+}  
+//子复选框的事件  
+function setSelectAll(){
+    //当没有选中某个子复选框时，SelectAll取消选中  
+    if (!$("#ck").checked) {  
+        $("#ck").prop("checked", false);  
+    }  
+    var chsub = $("input[type='checkbox'][name='cks']").length; //获取subcheck的个数  
+    var checkedsub = $("input[type='checkbox'][name='cks']:checked").length; //获取选中的subcheck的个数  
+    if (checkedsub == chsub) {  
+        $("#ck").prop("checked", true);  
+    }  
+}
+//点击操作获取值
+function check1(){
+    var str=[];
+    var r=document.getElementsByName("cks"); 
+    var uuid=[];
+    for(var i=0;i<r.length;i++){
+         if(r[i].checked){
+             //获取选中的checkbox的值
+             str.push(r[i].value);
+            //获取选中的自定义属性的值
+            uuid.push(r[i].getAttribute('uuid'));
+             
+       }
+    }
 ```
