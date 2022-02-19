@@ -8,7 +8,7 @@ $(window).scroll(function () {
 ```
 
 #### JS获取当前页面的滚动位置
-```javascript
+``` javascript
 const getScrollPosition = (el = window) => ({
             x: el.pageXOffset !== undefined ? el.pageXOffset : el.scrollLeft,
             y: el.pageYOffset !== undefined ? el.pageYOffset : el.scrollTop
@@ -16,6 +16,7 @@ const getScrollPosition = (el = window) => ({
 ```	
 
 #### GET请求和POST请求
+
 ```javascript
 $.post("/account/submit?type=Deals&orderid=1", {
 	id: id,
@@ -31,6 +32,7 @@ $.post("/account/submit?type=Deals&orderid=1", {
 $.get("/account/submit?type=<?= $_GET['type'] ?>&setp=key&id=" + id, function(html) {
 
 });
+
 ```
 
 #### 延时执行
@@ -78,6 +80,19 @@ layer.alert('邮箱格式不正确！');
 ```
 
 ### JS表单处理
+
+#### 获取SELECT选中项 自定义属性的值
+`<option value="123" data-username="用户名" data-userid="10086">选择</option>`
+
+```javascript
+$('#select1').find("option:selected").attr("自定义属性")"teachername": $('#teacher').find("option:selected").text(),  取名称
+"teacherid": $('#teacher').val(),
+"teacheruserid": $('#teacher').find("option:selected").attr("data-userid"),
+"teacherusername": $('#teacher').find("option:selected").attr("data-username")
+ // 第二种取值如果你的属性定义的是data-xxx,那么直接
+$('#select1').find("option:selected").data("xxx");
+$('#teacher').find("option:selected").data("userid")
+```
 
 #### 表单提交前的校验
 ```javascript
