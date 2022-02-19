@@ -179,6 +179,25 @@ $("标签类名").attr('aria-selected','改变的值');
 ```
 ### 动态处理
 
+#### 添加和移除CSS样式
+
+有时候需要添加CSS样式和移除CSS样式，如添加display属性，设为隐藏。有时候需要移除display属性。
+
+##### jQuery添加与移除CSS样式
+注意：当其中一种不支持时，就尝试另一种：
+```javascript
+$("#show").removeAttr("style");  //移除
+$("#show").attr("style","");  //设置
+$('#tab1').css("display","block"); //设置
+$("#add").addClass("btn-default"); //添加
+```
+##### JS添加或移除CSS样式
+```javascript
+document.getElementById('tab1').style.display="none";//设置样式
+document.getElementById("tab1").removeAttribute("style");//移除样式
+```
+
+
 #### 全选-反选-取选
 ```javascript
 <div id="list">
