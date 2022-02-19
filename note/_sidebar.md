@@ -2,6 +2,7 @@
 * 程序代码
   * 程序
     * [docsify](/note/program_docsify.md)
+    * [nginx](/note/program_nginx.md)
   * 代码
     * [php](/note/code_php.md)
     * [html](/note/code_html.md)
