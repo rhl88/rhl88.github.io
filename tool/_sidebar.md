@@ -1,3 +1,4 @@
 - [工具首页](/tool/README.md)
 - [网络相关](/tool/network.md)
 - [行业相关](/tool/industry.md)
+- [生活相关](/tool/life.md)
