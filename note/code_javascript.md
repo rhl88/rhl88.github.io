@@ -1,4 +1,248 @@
-### 读取并下载文件
+### 基础常用
+
+#### GET请求和POST请求
+```javascript
+$.post("/account/submit?type=Deals&orderid=1", {
+	id: id,
+	orderid: orderid
+}, function(data) {
+	layer.msg('Successful operation!', {
+		icon: 1
+	});
+	setTimeout(function() { //使用  setTimeout（）方法设定定时2000毫秒
+		window.location.reload(); //页面刷新
+	}, 1000);
+});
+$.get("/account/submit?type=<?= $_GET['type'] ?>&setp=key&id=" + id, function(html) {
+
+});
+```
+
+#### 延时执行
+```javascript
+setTimeout(function () {
+//代码
+}, 500);
+```
+#### 解析JSON为数组形式
+```javascript
+var res = JSON.parse(data);
+res.url;
+res.img;
+```
+
+### 字符验证
+
+#### 判断是否为纯数字
+```javascript
+if(!isNaN(ival)){
+ alert(val +"是数字");
+} else{
+alert(val +"不是数字");
+}
+```
+
+#### 手机号码验证
+```javascript
+var phone =$("input[name='phone']").val();
+var reg = /^1[0-9]{10}$/;
+var flag = reg.test(phone);
+if(!flag){
+layer.alert('手机号码不正确！');
+}
+```
+
+#### 邮箱验证
+```javascript
+var email =$("input[name='email']").val();
+var reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+var flag = reg.test(email);
+if(!flag){
+layer.alert('邮箱格式不正确！');
+}
+```
+
+### JS表单处理
+
+#### JQ获取数组表单内容
+```javascript
+<input type="text" name="keyword[]" placeholder="关键词" value="">
+<input type="text" name="keyword[]" placeholder="关键词" value="">
+<input type="text" name="keyword[]" placeholder="关键词" value="">
+<input type="text" name="keyword[]" placeholder="关键词" value="">
+<input type="text" name="keyword[]" placeholder="关键词" value="">
+<input type="text" name="keyword[]" placeholder="关键词" value="">
+
+<script>
+var keyword = [];
+jQuery("input[name^='keyword']").each(function(i) {
+    keyword[i] = jQuery(this).val();
+    //alert(jQuery(this).val()); //返回每个值
+});
+if (keyword == '') {
+    layer.msg('关键词不能为空', {
+        icon: 2
+    });
+    return false;
+}
+</script>
+```
+
+#### 设置表单值
+```javascript
+$("input[name='name']").val(obj.name);
+```
+
+#### 获取表单内容
+```javascript
+$("input[name='name']").val()
+```
+
+#### 获取多个下拉选中
+```javascript
+var tags = new Array();
+$.each($("#item_tags").find('option:selected'), function (index, item) {
+       tags.push($(item).val());
+});
+```
+
+#### 获取下拉选中值
+```javascript
+$("#gid").find('option:selected').val();
+//或
+$("select[name='region']").val();
+```
+
+#### 获取下拉中ID值
+```javascript
+var yt = document.getElementById("yt").value;
+```
+
+#### 获取多选选中值
+```javascript
+//jquery获取复选框值    
+var chk_value =[];//定义一个数组    
+$('input[name="interest"]:checked').each(function(){//遍历每一个名字为interest的复选框，其中选中的执行函数    
+  chk_value.push($(this).val());//将选中的值添加到数组chk_value中    
+});
+```
+
+#### 获取单选选中值
+```javascript
+$(':radio[name="gotype"]:checked').val();
+```
+
+
+#### 读取与设置id中的data
+```javascript
+$("#plus").data("display"); //读取id=plus 中的 data-display 的值
+$("#plus").data("display","asdfasdfaf"); //设置id=plus 中的 data-display 的值
+```
+
+#### JQ修改自定义值
+
+```javascript
+$("标签类名").attr('aria-selected','改变的值');
+```
+
+#### JS获取ID内的表单转为数组并POST
+```javascript
+        var data=[];
+        $("#formhidden").find("input").each(function(i,item){
+            var obj=new Object();
+            var name=$(this).attr('name');
+            var value=$(this).val();
+            obj[name]=value;
+            data.push(obj);
+        })
+        $.post("/ajax.php", {data}, function (count) {
+            $("#ajaxcount").html(count);
+        });
+```
+### 动态处理
+
+#### 全选-反选-取选
+```javascript
+<div id="list">
+<input type="checkbox" name="ids" id="all" value="1" />
+<input type="checkbox" name="ids" id="all" value="2" />
+<input type="checkbox" name="ids" id="all" value="3" />
+<input type="checkbox" name="ids" id="all" value="4" />
+</div>
+
+<input type="button" value="全选/取消" class="btn btn-default" id="all">
+<input type="button" value="全选" class="btn btn-default" id="selectAll">
+<input type="button" value="全不选" class="btn btn-default" id="unSelect">
+<input type="button" value="反选" class="btn btn-default" id="list">
+
+$(function () {
+        //全选或全不选
+        $("#all").click(function () {
+            if (this.checked) {
+                $("#list :checkbox").prop("checked", true);
+            } else {
+                $("#list :checkbox").prop("checked", false);
+            }
+        });
+        //全选  
+        $("#selectAll").click(function () {
+            $("#list :checkbox,#all").prop("checked", true);
+        });
+        //全不选
+        $("#unSelect").click(function () {
+            $("#list :checkbox,#all").prop("checked", false);
+        });
+
+        //设置全选复选框
+        $("#list :checkbox").click(function () {
+            allchk();
+        });
+
+    });
+```
+
+#### 替换指定ID的内容
+```javascript
+$('#contents').html("替换ID的内容");
+```
+
+
+#### 获取指定ID内的HTML
+```javascript
+$('#contents').html();
+```
+
+#### 根据ID设置宽度
+```javascript
+$("#id").css('width','100px');
+```
+
+#### 根据id删除元素
+
+```javascript
+$( "#div1" ).remove();
+```
+
+#### 设置ID内的class
+```javascript
+$("#plus").attr('class', 'fa fa-plus');
+```
+
+### 数据转换
+#### 字符转换为数组
+
+```javascript
+var data = '123,23123,123,123,234,234';
+var arr = data.split(',');
+```
+
+#### 数组转换为字符
+```javascript
+var data = ['a','b','c'];
+var arr = data.join(',');
+```
+
+### JS读取并下载文件
 演示：[纸张厚度计算器](//www.renhuali.cn/demo/industry/PaperThicknessCalculator.html)中的保存到本地
 
 代码
@@ -31,7 +275,7 @@ function export_raw(name, data) {
 ```
 
 
-### 将网页文件设置为窗口工具
+### JS将网页文件设置为窗口工具
 
 演示：[纸张厚度计算器](//www.renhuali.cn/demo/industry/PaperThicknessCalculator.html)中的保存到本地的文件
 
