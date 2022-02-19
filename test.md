@@ -12,12 +12,10 @@
 
 示例：
 ```
-![blockchain](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/
-u=702257389,1274025419&fm=27&gp=0.jpg "区块链")
+![blockchain](https://www.baidu.com/img/flexible/logo/pc/result.png "百度")
 ```
 
-![blockchain](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/
-u=702257389,1274025419&fm=27&gp=0.jpg "区块链")
+![blockchain](https://www.baidu.com/img/flexible/logo/pc/result.png "百度")
 
 ### 分割线
 三个或者三个以上的 - 或者 * 都可以。
