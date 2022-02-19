@@ -362,6 +362,45 @@ function export_raw(name, data) {
 }  
 ```
 
+### 重新加载引入的JS文件
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.3.1.min.js"></script>
+ 
+</head>
+<body>
+<button onclick="reload()">load</button>
+    <script>
+        //需要重新加载的js文件列表
+        var scriptList=[
+            {src:"./test.js",id:"js1"},
+            {src:"./test2.js",id:"js2"},
+            {src:"./test3.js",id:"js3"}
+            ]
+        function reload() {
+            scriptList.forEach(x=>{
+                loadJs(x.src,x.id);
+            })
+        }
+        //重新加载js        
+        function loadJs(file,id)
+        {
+            $("#"+id).remove();
+            $("<scri"+"pt >"+"</scr"+"ipt>").attr({id:id,src:file,type:'text/javascript'}).appendTo($('body'));
+        }
+    </script>
+    <script src="./test.js" type="text/javascript" id="js1"></script>
+    <script src="./test2.js" type="text/javascript" id="js2"></script>
+    <script src="./test3.js" type="text/javascript" id="js3"></script>
+</body>
+</html>
+```
 
 ### JS将网页文件设置为窗口工具
 
