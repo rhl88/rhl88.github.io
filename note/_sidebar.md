@@ -9,3 +9,5 @@
 * 网络技巧
   * 网站
     * [百度系](/note/skill_baidu.md)
+* 网站收藏
+  * [资源下载](/note/website_download.md)
