@@ -64,6 +64,24 @@ layer.alert('邮箱格式不正确！');
 
 ### JS表单处理
 
+#### 表单提交前的校验
+```javascript
+ <form id="book" action="${ctx}/frontPage/passFlight/GJbookPayValidate" class="plug_form" method="post" onsubmit="return checkMobile()">
+ 
+ </form>
+ 
+ <script>
+ function checkMobile(){
+ 
+ if(不想提交){
+      return false;
+ }else{
+     return true;
+ }
+}
+</script>
+```
+
 #### JQ获取数组表单内容
 ```javascript
 <input type="text" name="keyword[]" placeholder="关键词" value="">
@@ -228,7 +246,58 @@ $( "#div1" ).remove();
 $("#plus").attr('class', 'fa fa-plus');
 ```
 
-### 数据转换
+### 数据处理
+
+#### 复制内容
+##### 单行复制
+```javascript
+function copyText(text, callback) { // text: 要复制的内容， callback: 回调
+        var tag = document.createElement('input');
+        tag.setAttribute('id', 'cp_hgz_input');
+        tag.value = text;
+        document.getElementsByTagName('body')[0].appendChild(tag);
+        document.getElementById('cp_hgz_input').select();
+        document.execCommand('copy');
+        document.getElementById('cp_hgz_input').remove();
+        if (callback) {
+            callback(text)
+        }
+    }
+function xCopy(info) {
+        copyText(info, function () {
+            layer.alert('复制成功！快去分享吧！');
+        })
+    }
+```
+##### 多行复制
+
+```javascript
+    /**
+     * 复制到剪切板
+     */
+    function copyContent() {
+      var name = '姓名：' + $('#name').text() + " \n";
+      var detail = '详细地址：' + $('#detail').text() + " \n";
+      var city = '城市：' + $('#city').text() + " \n";
+      var postcode = '邮编：' + $('#postcode').text() + " \n";
+      var country = '国家：United Kingdom' + " \n";
+      var telephone = '电话：' + $('#telephone').text() + " \n";
+      var content = name.concat(detail, city, postcode, country, telephone);
+ 
+      // 使用textarea支持换行，使用input不支持换行
+      const textarea = document.createElement('textarea');
+      textarea.value = content;
+      document.body.appendChild(textarea);
+ 
+      textarea.select();
+      if (document.execCommand('copy')) {
+        document.execCommand('copy');
+        alert(content);
+      }
+      document.body.removeChild(textarea);
+    }
+```
+
 #### 字符转换为数组
 
 ```javascript
