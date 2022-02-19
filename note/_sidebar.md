@@ -6,3 +6,6 @@
     - [php](/note/code_php.md)
     - [js](/note/code_javascript.md)
     - [C#](/note/code_csharp.md)
+- 网络技巧
+  - 网站
+    - [百度系](/note/skill_baidu.md)
