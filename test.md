@@ -1,5 +1,38 @@
 ## 文档语法
 
+### 链接
+```
+[链接名称](链接地址)
+
+或者
+
+<链接地址>
+```
+
+```
+这是一个链接 [测试](https://www.renhuali.cn)
+```
+这是一个链接 [测试](https://www.renhuali.cn)
+
+直接使用链接地址：
+```
+<https://www.renhuali.cn>
+```
+
+<https://www.renhuali.cn>
+
+
+高级链接
+
+我们可以通过变量来设置一个链接，变量赋值在文档末尾进行：
+```
+这个链接用 1 作为网址变量 [Google][1]
+这个链接用 test 作为网址变量 [测试][test]
+然后在文档的结尾为变量赋值（网址）
+
+  [1]: http://www.google.com/
+  [test]: http://www.renhuali.cn/
+```
 
 ### 脚注
 
