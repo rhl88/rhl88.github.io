@@ -1,8 +1,8 @@
-- [笔记首页](/node/README.md)
+- [笔记首页](/note/README.md)
 - 程序代码
   - 程序
-    - [docsify](/node/program_docsify.md)
+    - [docsify](/note/program_docsify.md)
   - 代码
-    - [php](/node/code_php.md)
-    - [js](/node/code_javascript.md)
-    - [C#](/node/code_csharp.md)
+    - [php](/note/code_php.md)
+    - [js](/note/code_javascript.md)
+    - [C#](/note/code_csharp.md)
