@@ -35,7 +35,16 @@
     [<a href="https://www.layuion.com/doc/modules/layer.html" target="_blank">文档</a>] [<a href="https://www.layuion.com/layer/?alone" target="_blank">演示</a>]
 </p>
 <p>
-    <textarea class="form-control" id="content" rows="15" style="max-height: 2222px;width:100%;" placeholder="请把要调试的HTML代码放这里"></textarea>
+    <textarea class="form-control" id="content" rows="15" style="max-height: 2222px;width:100%;" placeholder="请把要调试的HTML代码放这里">
+            <input type="text" name="test" value = "你好测试！">
+
+<script type = "text/javascript">
+ $(function() {
+    var test = $("input[name='test']").val();
+    layer.alert(test);
+}); 
+</script>
+        </textarea>
 </p>
 <p>
     <input onclick="demo();" type="button" value="调试预览"/>
