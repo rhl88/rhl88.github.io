@@ -13,3 +13,4 @@
     * [百度系](/note/skill_baidu.md)
 * 网站收藏
   * [资源下载](/note/website_download.md)
+  * [在线工具](/note/website_tool.md)
