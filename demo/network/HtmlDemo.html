@@ -1,22 +1,46 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>HTML在线预览</title>
-</head>
-<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>
+            HTML在线预览
+        </title>
+    </head>
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js">
+    </script>
+    
+    <body>
+    </body>
+    <input type="hidden" name="isJq" value="<script src='//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js'></script>">
+    <p>
+        JQ
+        <input type="radio" name="jq" value="no" />
+        不用
+        <input type="radio" name="jq" value="yes" checked="checked" />
+        使用
+    </p>
+    <p>
+        <textarea class="form-control" id="content" rows="15" style="max-height: 2222px;width:100%;"
+        placeholder="请把要调试的HTML代码放这里">
+        </textarea>
+    </p>
+    <p>
+        <input onclick="demo();" type="button" value="调试预览" />
+    </p>
+    <script type="text/javascript">
+        function demo() {
+            var demo = $("#content").val();
+            var jq = $("input[name='jq']:checked").val();
+            if (jq == "yes") {
+                var isJq = $("input[name='isJq']").val();
+                demo = isJq + demo;
+            }
+            var win = window.open();
+            win.document.open();
+            win.document.write(demo);
+            win.document.close()
+        }
+    </script>
 
-<body>
-  
-</body>
-  
-  <textarea class="form-control" id="content" rows="15" style="max-height: 2222px;width:100%;" placeholder="请把要调试的HTML代码放这里"></textarea>
-  
-  <p><input onclick="demo();" type="button" value="调试预览" /> </p>
-  
- <script type="text/javascript">
-        function demo() { var win = window.open(); win.document.open(); win.document.write($("#content").val()); win.document.close() }
- </script>
-  
 </html>
