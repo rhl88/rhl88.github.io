@@ -6,15 +6,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>MM与PT互转</title>
-    <script src="//libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <style type="text/css" media="screen">
 
     </style>
 </head>
 
 <div id="tools" style=" width: 100%; ">
-    <p>MM：<input type="text" id="mm" value="0" style="width: 100px;" />  <a onclick="getpt()">转PT</a></p> 
-    <p>PT：<input type="text" id="pt" value="0" style="width: 100px;" /> <a onclick="getmm()">转mm</a></p>
+    <p>MM：<input type="text" id="mm" value="0" style="width: 100px;" />  <input type="button" value="转PT" onclick="getpt();" /></p> 
+    <p>PT：<input type="text" id="pt" value="0" style="width: 100px;" /> <input type="button" value="转MM" onclick="getmm();" /></p>
 </div>
 <body>
     <script type="text/javascript"> 
@@ -23,17 +23,15 @@
      window.resizeTo(300,290); 
      //窗口位置
      window.moveTo(screen.availWidth/2,screen.availHeight/2); 
-
+   
      function getpt(){
         var mm = $("#mm").val();
-        var pt = $("#mm").val();
         var setpt = mm*72/25.4;
         $("#pt").val(setpt);
      }
 
      function getmm(){
-        var mm = $("#mm").val();
-        var pt = $("#mm").val();
+        var pt = $("#pt").val();
         var setmm = pt*25.4/72;
         $("#mm").val(setmm);
      }
