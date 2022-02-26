@@ -4,10 +4,11 @@
     * [docsify](/note/program_docsify.md)
     * [nginx](/note/program_nginx.md)
   * 代码
+    * [C#](/note/code_csharp.md)
     * [php](/note/code_php.md)
     * [html](/note/code_html.md)
+    * [hta](/note/code_hta.md)
     * [js](/note/code_javascript.md)
-    * [C#](/note/code_csharp.md)
 * 网络技巧
   * 网站
     * [百度系](/note/skill_baidu.md)
