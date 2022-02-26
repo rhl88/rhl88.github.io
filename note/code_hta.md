@@ -1,0 +1,17 @@
+### 基本语法
+
+``` hta
+<HTA:APPLICATION 
+	ID="ADSITest"
+	VERSION="0.20 Beta"
+	APPLICATIONNAME="ADSI Test Tool"
+	SYSMENU="yes"
+	MAXIMIZEBUTTON="yes"
+	MINIMIZEBUTTON="yes"
+	BORDER="thin"
+	INNERBORDER="no"
+	SCROLL="auto"
+	SINGLEINSTANCE="yes"
+	WINDOWSTATE="maximize"
+>
+```
