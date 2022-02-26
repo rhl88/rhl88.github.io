@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>批量提交Label</title>
+    <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <style type="text/css" media="screen">
+
+    </style>
+</head>
+
+<p>提交地址：<input type="text" id="cms" value="http://web.baidu.com/cms" style="width:200px"></p>
+<input type="button" value="登录账号" onclick="login();">
+<br><br><br>
+<p><b>批量提交Label：</b></p>
+<p>LabelURL:<input type="text" id="LabelUrl" value="/Product/ProductPropertyCatalogSave/" style="width:500px"></p>
+<p>提交数据：<br><textarea id="LabelData" rows="12" style="width: 80%;">
+{"Success":true,"RecordCount":30,"Data":[{"ProductPropertyCatalogId":"a7ff4de7-5179-4c80-86e6-b9741fba97de","Name":"打印渠道","Checkintime":"2022-02-20 20:46:31","OrderNo":1,"Type":1,"TypeName":"单选","Label":"printChannel","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/63780986789740639685d.png"},{"ProductPropertyCatalogId":"c92764fc-0a83-4323-91ef-d6e4acec22a2","Name":"内含款数","Checkintime":"2022-01-09 19:42:16","OrderNo":1,"Type":3,"TypeName":"填空","Label":"SerialNum","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/6377735413075060199d5.png"},{"ProductPropertyCatalogId":"ec301070-0da7-4d45-9b86-9738c4b1e31f","Name":"系统_批次分类","Checkintime":"2022-01-01 16:04:16","OrderNo":1,"Type":1,"TypeName":"单选","Label":"sys_pcfl","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/6377664985449468680cb.png"},{"ProductPropertyCatalogId":"f8bf4cb7-9a9e-4d56-b823-27b674d3c65d","Name":"数量输入方式","Checkintime":"2022-01-01 14:10:22","OrderNo":1,"Type":1,"TypeName":"单选","Label":"qtyInputType","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637766430197251273b64.png"},{"ProductPropertyCatalogId":"53274335-684c-4281-acd1-40c5889845a5","Name":"背双面胶","Checkintime":"2021-12-30 14:15:27","OrderNo":1,"Type":1,"TypeName":"单选","Label":"smj","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637764773458970363f5d.png"},{"ProductPropertyCatalogId":"9fd59816-0f9a-47cf-ad90-3dc9e59962ed","Name":"材料类型","Checkintime":"2021-12-29 14:34:01","OrderNo":1,"Type":1,"TypeName":"单选","Label":"materialType","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637763852404523920801.png"},{"ProductPropertyCatalogId":"c481b146-e087-425d-af54-8d0f46e633d4","Name":"高","Checkintime":"2021-12-20 10:58:34","OrderNo":1,"Type":3,"TypeName":"填空","Label":"height","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637755947101588481614.png"},{"ProductPropertyCatalogId":"9c4fcb2a-1931-473f-b9c1-bc94f9b492ef","Name":"宽","Checkintime":"2021-12-20 10:58:13","OrderNo":1,"Type":3,"TypeName":"填空","Label":"sys_width","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/6377559469234587046eb.png"},{"ProductPropertyCatalogId":"fd72ccbc-d0ac-492c-9933-0ca3ea6c56f0","Name":"自定义尺寸","Checkintime":"2021-12-20 10:39:03","OrderNo":1,"Type":3,"TypeName":"填空","Label":"coustomSize","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637755935418263404f89.png"},{"ProductPropertyCatalogId":"ca1428d1-8595-4c8b-bcd3-aaacb6c141e0","Name":"是否需要拼版","Checkintime":"2021-12-19 15:57:22","OrderNo":1,"Type":1,"TypeName":"单选","Label":"isneedimpose","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/63775526241279339014b.png"},{"ProductPropertyCatalogId":"9d1229d6-89bc-4499-8456-296f3e4b6707","Name":"单只尺寸","Checkintime":"2021-12-19 15:35:30","OrderNo":1,"Type":1,"TypeName":"单选","Label":"fileSize","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637755249253932927027.png"},{"ProductPropertyCatalogId":"c2b6b0c3-b17f-492a-9b6f-62bccab73a33","Name":"订购类型","Checkintime":"2021-09-17 12:31:23","OrderNo":1,"Type":1,"TypeName":"单选","Label":"multiple","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/6376835026907546982c8.png"},{"ProductPropertyCatalogId":"5f0890ff-8770-4ce8-977f-859d0b0f9ca2","Name":"备注","Checkintime":"2021-07-05 09:34:56","OrderNo":1,"Type":3,"TypeName":"填空","Label":"remarks","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637616819573000401c42.png"},{"ProductPropertyCatalogId":"1deb02e7-f879-4d7e-a222-9e7e09fde1fd","Name":"是否含出血","Checkintime":"2021-01-25 16:52:21","OrderNo":1,"Type":1,"TypeName":"单选","Label":"IsBleed","ProductionTechnologyId":null,"IconUrl":"http://localhost:41680/UserFiles/Logo/6375652633840448914df.png"},{"ProductPropertyCatalogId":"39270363-23ae-4cb5-9660-917efb3b611c","Name":"单双面","Checkintime":"2021-01-25 16:51:43","OrderNo":1,"Type":1,"TypeName":"单选","Label":"isDoubleSide","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637618594374402972343.png"},{"ProductPropertyCatalogId":"26460718-b2c9-428d-ac7b-39c7c82b39e3","Name":"订单状态","Checkintime":"2021-01-11 17:38:36","OrderNo":1,"Type":1,"TypeName":"单选","Label":"status","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/63761859432777607387b.png"},{"ProductPropertyCatalogId":"ca98be46-e400-45b1-b318-934fee068dcd","Name":"封面材料","Checkintime":"2020-12-30 14:54:15","OrderNo":1,"Type":1,"TypeName":"单选","Label":"cover1","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637618594285528374da6.png"},{"ProductPropertyCatalogId":"31a7b181-021f-49e1-9f10-4f67ab4722d3","Name":"套数","Checkintime":"2020-11-25 22:57:56","OrderNo":1,"Type":3,"TypeName":"填空","Label":"quantity","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637684392348547399fd0.png"},{"ProductPropertyCatalogId":"a069b608-c198-43ad-a25f-54aa7c8c24b0","Name":"产品处理","Checkintime":"2020-11-09 14:41:01","OrderNo":1,"Type":1,"TypeName":"单选","Label":"productProcess","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637618598285998216dce.png"},{"ProductPropertyCatalogId":"3bf44988-70dd-47a0-a3df-1284b0055cb9","Name":"打印尺寸","Checkintime":"2020-11-03 15:24:59","OrderNo":1,"Type":1,"TypeName":"单选","Label":"printingSize","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/6376185941774887396a2.png"},{"ProductPropertyCatalogId":"84244287-2527-448e-b070-1582add94710","Name":"加工","Checkintime":"2020-10-26 14:40:14","OrderNo":1,"Type":1,"TypeName":"单选","Label":"process","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637618598059019363c7a.png"},{"ProductPropertyCatalogId":"48cf4e81-7aab-4c09-a692-34a0d70712e3","Name":"切割","Checkintime":"2020-10-26 14:39:50","OrderNo":1,"Type":1,"TypeName":"单选","Label":"protype","ProductionTechnologyId":"2cb390e2-7985-4e67-857d-2b184e4a52d6","IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637618598115114409fd7.png"},{"ProductPropertyCatalogId":"fbe32fd6-99e6-4efb-a5a0-02fee1b55431","Name":"划刀","Checkintime":"2020-10-25 17:37:59","OrderNo":1,"Type":1,"TypeName":"单选","Label":"protype","ProductionTechnologyId":"3c8bc682-5570-4633-badb-0a3338501fad","IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/63761859780134191429c.png"},{"ProductPropertyCatalogId":"976c038b-5f2c-490c-8a42-1448763cbae7","Name":"材料","Checkintime":"2020-10-23 22:16:15","OrderNo":1,"Type":1,"TypeName":"单选","Label":"material","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/6376185939981804156a6.png"},{"ProductPropertyCatalogId":"65b0d91d-2b69-429c-86f7-30c0aeb6dc02","Name":"覆膜","Checkintime":"2020-10-23 21:59:17","OrderNo":1,"Type":1,"TypeName":"单选","Label":"mulching","ProductionTechnologyId":"baf74100-d8f1-44a8-af79-19dc66be5d68","IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637618593946407722c60.png"},{"ProductPropertyCatalogId":"1a133694-43d5-49b6-b8f6-d9f8b0497772","Name":"机型","Checkintime":"2020-10-23 20:53:26","OrderNo":1,"Type":1,"TypeName":"单选","Label":"printer","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/63761681975837893844b.png"},{"ProductPropertyCatalogId":"35f5053a-988c-4376-987e-10f721ddc38a","Name":"系统_装订类型","Checkintime":"2020-10-23 13:29:23","OrderNo":1,"Type":1,"TypeName":"单选","Label":"Lab","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637618593826518242cc4.png"},{"ProductPropertyCatalogId":"8300517f-a2c0-4929-b741-938b5ed1b6ae","Name":"系统_纸型","Checkintime":"2020-10-23 13:23:23","OrderNo":1,"Type":1,"TypeName":"单选","Label":"Papers","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637618593669955396963.png"},{"ProductPropertyCatalogId":"07358b1c-ba0f-43d5-8615-65df8cca9a4f","Name":"颜色","Checkintime":"2020-10-22 11:17:52","OrderNo":1,"Type":1,"TypeName":"单选","Label":"color","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/637616819679685352a26.png"},{"ProductPropertyCatalogId":"92d2be2f-26bd-4c2e-a7c3-4eb023a14c06","Name":"数码印刷用纸","Checkintime":"2020-08-12 15:18:40","OrderNo":1,"Type":1,"TypeName":"单选","Label":"paper","ProductionTechnologyId":null,"IconUrl":"http://www.wxsz.aiprinting.cn/UserFiles/Logo/6376185935502466207a3.png"}],"PageCount":1}
+</textarea></p>
+<input type="button" value="提交Label" onclick="PostLabel();">
+<br><br><br>
+<p><b>批量提交ItemLabel：</b></p>
+<p>LabelURL:<input type="text" id="ItemLabelUrl" value="/Product/ProductPropertySave/" style="width:500px"></p>
+<p>productPropertyCatalogId:<input type="text" id="productPropertyCatalogId" value="" style="width:500px"></p>
+<p>提交数据：<br><textarea id="ItemLabelData" rows="12" style="width: 80%;"></textarea></p>
+<input type="button" value="提交ItemLabel" onclick="PostItemLabel();">
+
+<body>
+    <script type="text/javascript">
+        //批量提交Label
+        function PostLabel() {
+            var cms = $("#cms").val();
+            var LabelUrl = $("#LabelUrl").val();
+            var LabelData = $("#LabelData").val();
+            var url = cms + LabelUrl;
+            var data = JSON.parse(LabelData);
+            //console.log(data.Data);
+
+            //登录账号
+            //login();
+
+            //测试提交一条
+            //var PostData = {"productPropertyCatalogId": "", "orderNo": 1, "name": data.Data[0].Name, "type": data.Data[0].Type, "label": data.Data[0].Label, "ProductionTechnologyId": "", "iconUrl": data.Data[0].IconUrl };
+            //console.log(PostData);
+            //GoPost(url, PostData)
+
+            for (let i = 0; i < data.Data.length; i++) {
+                //表单数据
+                var PostData = { "productPropertyCatalogId": "", "orderNo": 1, "name": data.Data[i].Name, "type": data.Data[i].Type, "label": data.Data[i].Label, "ProductionTechnologyId": "", "iconUrl": data.Data[i].IconUrl };
+                //console.log(PostData);
+                setTimeout(() => {
+                    //GoPost(url, PostData);
+                    console.log("提交了：" + i + "------" + data.Data[i].Name);
+                }, 100 * i)
+            }
+        }
+
+        //批量提交ItemLabel
+        function PostItemLabel() {
+            var cms = $("#cms").val();
+            var LabelUrl = $("#ItemLabelUrl").val();
+            var LabelData = $("#ItemLabelData").val();
+            var productPropertyCatalogId = $("#productPropertyCatalogId").val();
+            var url = cms + LabelUrl;
+            var data = JSON.parse(LabelData);
+            for (let i = 0; i < data.Data.length; i++) {
+                //表单数据
+                var PostData = { "itemOrder": data.Data[i].ItemOrder, "productPropertyId": "", "productPropertyCatalogId": productPropertyCatalogId, "name": data.Data[i].Name, "summary": data.Data[i].Summary, "photo": "http://web.czl.aiprinting.cn/cms/Content/images/no_picture.png", "price": data.Data[i].Price, "type": data.Data[i].Type, "weight": data.Data[i].Weight, "isRelevanceSize": data.Data[i].IsRelevanceSize, "position": data.Data[i].Position, "holeType": data.Data[i].HoleType, "holeSpacing": data.Data[i].HoleSpacing, "remark": data.Data[i].Remark, "erpCode": data.Data[i].ErpCode, "isUploadFile": data.Data[i].IsUploadFile, "toUploadName": data.Data[i].ToUploadName, "isSpecialSize": data.Data[i].IsSpecialSize, "isRelatedPage": data.Data[i].IsRelatedPage, "isRelatedPrintSize": data.Data[i].IsRelatedPrintSize, "defalutPageSize": "", "defalutPrintSize": "", "itemLabel": data.Data[i].ItemLabel };
+                //console.log(PostData);
+                setTimeout(() => {
+                    GoPost(url, PostData);
+                    console.log("提交了：" + i + "------" + data.Data[i].Name);
+                }, 100 * i)
+            }
+
+        }
+
+
+        //登录账号
+        function login(userName = "18949822407", pwd = "123456") {
+            var cms = $("#cms").val();
+            var url = cms + "/Home/LoginSubmit/";
+            GoPost(url, { languageId: "zh-CN", userName: userName, pwd: pwd, check: "false", ip: "" });
+        }
+
+        //提交添加请求
+        function GoPost(url, data) {
+            $.post(url, data, function (json) {
+                return json;
+            });
+        }
+    </script>
+
+</body>
+
+</html>
