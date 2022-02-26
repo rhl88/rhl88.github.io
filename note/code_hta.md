@@ -1,17 +1,39 @@
 ### 基本语法
+#### APPLICATION
+`<HTA:Application>` 标签说明
 
+| 属性      | 说明 | 其它       |
+| ------------ | ---- | ---------- |
+| Applicationname      |   设置HTA的名称   |      |
+| SingleInstance |   设置此应用程序是否同时只能运行一次，默认值为 no。   | no:多次 yes:一次 |
+| WindowState |   设置窗口的初始大小，默认值为 normal。   | normal 默认大小<br>minmize 最小化 <br>maximize 最大化 |
+| Borde | 设置窗口边框类型，默认值为 thick 。 | thick 指定窗口为粗边框<br>dialog window 指定窗口为对话框<br>none 指定窗口无边框<br>thin 指定窗口为窄边框（固定窗口大小） |
+| border |  | 可选参数 thick、thin |
+| BorderStyle | 设置窗口的边框格式，默认值为 normal 。 | normal 普通边框 <br>complex 凹凸格式组合边框 <br>raised 凸出的3D边框 <br>static 3D边框 <br>sunken 凹进的3D边框 |
+| Caption | 设置窗口是否显示标题栏或标题，默认值为 yes | no:不显示 yes:显示 |
+| MaximizeButton | 设置是否在窗口中显示最大化按钮，默认值为 yes。 | no:不显示 yes:显示 |
+| MinimizeButton | 设置是否在窗口中显示最小化按钮，默认值为 yes。 | no:不显示 yes:显示 |
+| SysMenu | 设置是否在窗口中显示系统菜单，默认值为 yes。 | no:不显示 yes:显示 |
+| ShowInTaskBar | 设置是否在任务栏中显示此应用程序，默认值为 yes。 | no:不显示 yes:显示 |
+| Icon | 设置应用程序在标题栏、任务栏的图标。 | no:不显示 yes:显示 |
+| Version | 设置应用程序的版本，默认值为空。 |  |
+| scroll | 设置滚动条，默认值为 yes。 | no:不显示 yes:显示 |
+| contextmenu | 设置是否在窗口中显示文本菜单，默认值为 yes。（右键） | no:不显示 yes:显示 |
+| selection | 设置是否在窗口中选择，默认值为 yes。 |  |
+
+示范代码： 
 ``` hta
 <HTA:APPLICATION 
 	ID="ADSITest"
 	VERSION="0.20 Beta"
-	APPLICATIONNAME="ADSI Test Tool"
+	Applicationname="Test Tool"
 	SYSMENU="yes"
 	MAXIMIZEBUTTON="yes"
 	MINIMIZEBUTTON="yes"
 	BORDER="thin"
 	INNERBORDER="no"
 	SCROLL="auto"
-	SINGLEINSTANCE="yes"
-	WINDOWSTATE="maximize"
+	SingleInstance="yes"
+	WindowState="maximize"
 >
 ```
