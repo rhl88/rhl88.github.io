@@ -1,4 +1,5 @@
 ### 基本语法
+参考示范： https://www.robvanderwoude.com/htaexamples.php
 #### APPLICATION
 `<HTA:Application>` 标签说明
 
