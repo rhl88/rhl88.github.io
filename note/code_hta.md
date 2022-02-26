@@ -37,3 +37,19 @@
 	WindowState="maximize"
 >
 ```
+#### VBScript
+`<script language="VBScript">` 说明
+
+##### 动态更新标题信息
+标题栏会动态显示 `新的标题 - 2022年2月26日 星期六 9:17:21`
+
+``` VBScript
+<script language="VBScript">
+
+    Sub Title
+Document.title = "新的标题 - " & FormatDateTime(Now, 1) & " " & WeekdayName(WeekDay(now)) & " " & FormatDateTime(Now, 3)
+    End Sub
+ 
+Title:setInterval "Title()",500
+</script>
+``` hta
