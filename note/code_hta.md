@@ -1,5 +1,6 @@
 ### 基本语法
 参考示范： https://www.robvanderwoude.com/htaexamples.php
+微软官方文档：https://docs.microsoft.com/en-us/previous-versions//ms536496(v=vs.85)?redirectedfrom=MSDN
 #### APPLICATION
 `<HTA:Application>` 标签说明
 
