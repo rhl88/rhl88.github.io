@@ -1,7 +1,9 @@
 ### 基本语法
-参考示范： https://www.robvanderwoude.com/htaexamples.php
-微软官方文档：https://docs.microsoft.com/en-us/previous-versions//ms536496(v=vs.85)?redirectedfrom=MSDN
+参考示范： https://www.robvanderwoude.com/htaexamples.php  
 #### APPLICATION
+
+[微软官方文档](https://docs.microsoft.com/en-us/previous-versions/ms536495(v=vs.85))
+
 `<HTA:Application>` 标签说明
 
 | 属性      | 说明 | 其它       |
