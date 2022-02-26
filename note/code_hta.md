@@ -39,6 +39,20 @@
 ```
 #### VBScript
 `<script language="VBScript">` 说明
+##### 设置窗口大小
+宽：410 高450
+``` VBScript
+<script language="VBScript">window.resizeTo(410,450)</script>
+```
+
+##### 设置显示位置
+通过计算显示
+
+``` VBScript
+<script language="VBScript">
+window.moveTo(screen.availWidth/2,screen.availHeight/2);
+</script>
+```
 
 ##### 动态更新标题信息
 标题栏会动态显示 `新的标题 - 2022年2月26日 星期六 9:17:21`
@@ -52,4 +66,4 @@ Document.title = "新的标题 - " & FormatDateTime(Now, 1) & " " & WeekdayName(
  
 Title:setInterval "Title()",500
 </script>
-``` hta
+```
