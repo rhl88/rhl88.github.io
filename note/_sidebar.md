@@ -15,3 +15,4 @@
 * 网站收藏
   * [资源下载](/note/website_download.md)
   * [在线工具](/note/website_tool.md)
+  * [静态资源公共库](/note/website_cdn.md)
