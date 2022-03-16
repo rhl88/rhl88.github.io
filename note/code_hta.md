@@ -1,5 +1,6 @@
 ### 基本语法
 参考示范： https://www.robvanderwoude.com/htaexamples.php  
+参考学习： https://www.cnblogs.com/nutix/p/5135642.html  
 #### APPLICATION
 
 [微软官方文档](https://docs.microsoft.com/en-us/previous-versions/ms536495(v=vs.85))
