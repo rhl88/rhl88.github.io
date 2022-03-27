@@ -13,7 +13,7 @@
   * 网站
     * [百度系](/note/skill_baidu.md)
 * 网站收藏
-  * [生活相关]/note/website_life.md)
+  * [生活相关](/note/website_life.md)
   * [资源下载](/note/website_download.md)
   * [在线工具](/note/website_tool.md)
   * [静态资源公共库](/note/website_cdn.md)
